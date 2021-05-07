@@ -7,6 +7,9 @@ class Blog(models.Model):
     writer = models.CharField(max_length=100)
     pub_date = models.DateTimeField()
     body = models.TextField()
+     # 게시글 Post에 이미지 추가
+    mainphoto = models.ImageField(blank=True, null=True)
+    
 
     def __str__(self):
         return self.title

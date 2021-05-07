@@ -15,10 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import blog.views
+
+from django.conf import settings
+from django.conf.urls.static import static
+import blog.views #import 잊지말기
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',blog.views.home, name="home"),
+    path('',blog.views.first,name="first"),
+    path('blog/',blog.views.home, name="home"),
     path('blog/<int:blog_id>',blog.views.detail, name="detail"),
+    path('about_me/',blog.views.about_me, name="about_me"),
+    path('about_me/email',blog.views.email, name="email"),
+    path('about_me/github',blog.views.github, name="github"),
+    path('about_me/instagram',blog.views.instagram, name="instagram"),
 ]
+# 블로그 글 이미지 URL 설정
+urlpatterns += \
+    static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+#html 이미지 업로드
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
