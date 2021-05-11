@@ -17,8 +17,8 @@
     ></script>
     <title>Document</title>
   </head>
-  <body>
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd">
+  <body style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-light" style="background-color: #b9ddf6">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button
@@ -41,15 +41,18 @@
         </div>
       </div>
     </nav>
+    <div class="entire_card" style="display: flex; justify-content: center; flex-wrap : wrap; margin-top: 10px;"> 
     {% for blog in blogs.all%}
-    <div class="card" style="width: 18rem">
+    <div class="card" style="width: 25rem">
       <div class="card-body">
         <h5 class="card-title">{{blog.title}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{blog.pub_date}}</h6>
         <p class="card-text">{{blog.summary}}</p>
         <a class="card-link" href="{% url 'detail' blog.id%}">..more</a>
       </div>
-      {% endfor%}
+      
     </div>
+    {% endfor%}
+  </div>
   </body>
 </html>

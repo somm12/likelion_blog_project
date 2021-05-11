@@ -19,8 +19,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd">
+  <body style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-light" style="background-color: #b9ddf6">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
           <button
@@ -46,20 +46,25 @@
           </div>
         </div>
       </nav>
+      
       <div class="first_page_box">
         <div class="community_blog_text">
           <img src="{% static 'img/laugh.png' %}" alt="">
+          <div>community</div>
         </div>
         <div class="smile_emoji">
-          <div><i class="far fa-laugh-squint fa-5x"></i>
-           <div>welcome! somin's blog  </div>  </div>
+          <img src="{% static 'img/happiness.png' %}" alt="">
+           <div>welcome! somin's blog</div>
+          </div>
          
+          <div class="upload_img_text">
+            <img src="{% static 'img/image.png' %}" alt="">
+            <div>upload image</div>
+          </div>
         </div>
-        <div class="upload_img_text">
-          <img src="{% static 'img/image.png' %}" alt="">
-        </div>
+   
 
-      </div>
+      
       
       <script
       src="https://kit.fontawesome.com/6478f529f2.js"
